@@ -1,0 +1,16 @@
+import req from "./req"
+
+export const getTest = (uid,username) => req({url:'/getUpInfo',method:'GET',params:{uid,username}})
+export const getVideoBasicInfo = (bvid,username) => req({url:'/getVInfo',method:'GET',params:{bvid,username}})
+export const register = (username,password) => req({url:'/register',method:'POST',data:{username,password}})
+export const login = (username,password) => req({url:'/login',method:'POST',data:{username,password}})
+export const getHistory = (username,page) => req({url:'/getHis',method:'GET',params:{username,page}})
+export const getHisNums = (username) => req({url:'/getHisNums',method:'GET',params:{username}})
+export const getDivInfo = (username,tid,rid,dname) => req({url:'/getDivisions',method:'GET',params:{username,tid,rid,dname}})
+export const getAllDivInfo = (username) => req({url:'/getDivOfAll',method:'GET',params:{username}})
+export const getUserInfo = (username) => req({url:'/getUserInfo',method:'GET',params:{username}})
+export const changePsw = (username,newPw) => req({url:'/changePassword',method:'POST',data:{username,newPw}})
+export const changeGender = (username,newGender) => req({url:'/changeGender',method:'POST',data:{username,newGender}})
+export const changeIntro = (username,intro) => req({url:'/changeIntro',method:'POST',data:{username,intro}})
+export const changeBir = (username,bir) => req({url:'/changeBir',method:'POST',data:{username,bir}})
+export const getSuisan = (username) => req({url:'/getSuisan',method:'GET',params:{username}})
